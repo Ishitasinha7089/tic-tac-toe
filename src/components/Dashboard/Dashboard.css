@@ -7,12 +7,11 @@
 .tTTDashboard1518 .tTTDashboardBody1518{
     flex-direction: row;
     justify-content: center;
-    padding: 100px;
+    padding: 100px 0;
     flex: 1;
     position: relative;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: var(--greenLight);
-    
     
 }
 .tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518{
@@ -69,4 +68,40 @@
 .tTTStatusAndUndo1518 .tTTUndoMove1518 .tTTUndoDisabled1518{
     cursor: not-allowed;
     stroke: var(--disabled);
+}
+
+@media screen and (max-width:850px) {
+    .tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 img{
+        height: 70px;
+        width: 70px;
+    }
+    .tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 h1{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .tTTDashboard1518 .tTTDashboardBody1518{
+        padding: 10px;
+        align-items: flex-start;
+    }
+    .tTTDashboard1518 .tTTDashboardBody1518 .tTTBoardAndHistory1518{
+        position: absolute;
+        margin-top: 168px;
+    }
+    .tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 img{
+        height: 60px;
+        width: 60px;
+        margin-bottom: 10px;
+    }
+    .tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 h1{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 p{
+        font-size: 16px;
+    }
+    .tTTBoardAndHistory1518 .tTTStatusAndUndo1518 h3{
+        font-size: 20px;
+    }
 }

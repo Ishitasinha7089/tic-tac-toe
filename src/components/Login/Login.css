@@ -62,3 +62,40 @@
     flex-direction: row;
     margin: 30px 0;
 }
+
+@media screen and (max-width:1040px) {
+    .tTTLoginWrapper1518 .tTTLoginLeft1518 .tTTLoginHeading1518{
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .tTTLoginWrapper1518 .tTTLoginRight1518 .tTTLoginTokenList1518{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .tTTLoginWrapper1518{
+        flex-direction: column;
+    }
+    .tTTLoginWrapper1518 .tTTLoginLeft1518, .tTTLoginWrapper1518 .tTTLoginRight1518{
+        width: 100%;
+    }
+    .tTTLoginWrapper1518 .tTTLoginLeft1518{
+        height: 120px;
+    }
+    .tTTLoginWrapper1518 .tTTLoginLeft1518 .tTTLoginHeading1518{
+        font-size: 50px;
+        flex-direction: row;
+    }
+    .tTTLoginWrapper1518 .tTTLoginLeft1518 .tTTLoginHeading1518 span{
+        margin-top: 0;
+    }
+    .tTTLoginWrapper1518 .tTTLoginLeft1518 .tTTLoginBackImage1518{
+        display: none;
+    }
+    .tTTLoginWrapper1518 .tTTLoginRight1518 h2{
+        margin-top: 20px;
+    }
+}
