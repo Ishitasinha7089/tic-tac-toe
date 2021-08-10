@@ -1,0 +1,22 @@
+.tTTButtonWrapper1518  .tTTButton1518{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    border-radius: 8px;
+    background-color: var(--green);
+    box-shadow: 6px 6px 0 var(--greenDark);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    
+}
+.tTTButtonWrapper1518  .tTTButton1518:active{
+    box-shadow: none;
+    transform: translate(6px, 6px);
+}
+.tTTButtonWrapper1518  .tTTButton1518:disabled{
+    box-shadow: none;
+}

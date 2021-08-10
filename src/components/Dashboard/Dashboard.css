@@ -1,0 +1,72 @@
+.tTTDashboard1518{
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    
+}
+.tTTDashboard1518 .tTTDashboardBody1518{
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px;
+    flex: 1;
+    position: relative;
+    justify-content: space-around;
+    background-color: var(--greenLight);
+    
+    
+}
+.tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518{
+    flex-direction: column;
+    align-items: center;
+    
+}
+.tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+.tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 h1{
+    margin-bottom: 10px;
+}
+.tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 p{
+    font-size: 18px;
+}
+.tTTDashboard1518 .tTTDashboardBody1518 .tTTBoardAndHistory1518{
+    flex-direction: column;
+    align-items: center;
+    
+}
+.tTTDashboard1518 .tTTDashboardBody1518 .tTTBoardAndHistory1518 .tTTStatusAndUndo1518{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 30px 0;
+        
+        
+}
+.tTTBoardAndHistory1518 .tTTStatusAndUndo1518 h3{
+    font-size: 24px;
+    font-weight: 400;
+    
+}
+.tTTBoardAndHistory1518 .tTTStatusAndUndo1518 h3 span{
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+.tTTBoardAndHistory1518 .tTTStatusAndUndo1518 .tTTUndoMove1518{
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+.tTTStatusAndUndo1518 .tTTUndoMove1518 svg{
+    stroke:var(--greenDark);
+    stroke-width: 3;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.tTTStatusAndUndo1518 .tTTUndoMove1518 .tTTUndoDisabled1518{
+    cursor: not-allowed;
+    stroke: var(--disabled);
+}

@@ -1,0 +1,49 @@
+.tTTModal1518{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    background-color: var(--modalBack);
+    justify-content: center;
+    align-items: center;
+}
+
+.tTTModal1518 .tTTModalBody1518{
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--greenLight);
+    padding: 20px 40px;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.tTTModal1518 .tTTModalBody1518 .tTTWinnerModal1518{
+    flex-direction: column;
+    align-items: center;
+}
+.tTTModal1518 .tTTModalBody1518 .tTTWinnerModal1518 img{
+    height: 70px;
+    width: 70px;
+    margin-top: 20px;
+}
+.tTTModal1518 .tTTModalBody1518 .tTTWinnerModal1518 h1{
+    font-size: 24px;
+    margin-top: 28px;
+}
+
+.tTTModal1518 .tTTModalBody1518 .tTTWinnerModal1518 h3{
+    margin-top: 12px;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.tTTModal1518 .tTTModalBody1518 svg{
+    align-self: flex-end;
+    position: absolute;
+    top:8px;
+    right: 8px;
+    cursor: pointer;
+}
+.tTTCloseModal1518{
+    display: none;
+}

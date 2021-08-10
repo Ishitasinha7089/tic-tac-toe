@@ -1,0 +1,63 @@
+.tTTInputWrapper1518{
+    margin-top: 28px;
+    flex-direction: column;
+}
+
+.tTTInputWrapper1518 p{
+    margin-top: 8px;
+    color: var(--error);
+    height: 18px;
+    font-size: 14px;
+}
+.tTTInputWrapper1518 .tTTInputLabel1518{
+    position: relative;
+    width: fit-content;
+    height: 70px;
+    flex-direction: column;
+} 
+.tTTInputWrapper1518 .tTTInputLabel1518 .tTTLabel1518{
+    font-size: 20px;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 12px;
+    cursor: text;
+    color:var(--disabled)
+}
+.tTTInputWrapper1518 .tTTInputLabel1518 .tTTInput1518{
+    width: 300px;
+    border: none;
+    height: 4px;
+    transition: height 0.3s ease;
+    margin-top: auto;
+    font-size: 20px;
+    box-shadow: 0 4px 8px #eee;
+    border-radius: 12px;
+    
+}
+.tTTInputWrapper1518 .tTTInputLabel1518 .tTTInput1518:focus{
+    outline: none;
+    border: 3px solid;
+}
+.tTTInputWrapper1518 .tTTInputLabelExpanded1518 .tTTLabel1518{
+    font-size: 15px;
+    margin-bottom: 48px;
+    width: 100%;
+    animation: oscillateLabel 0.3s linear;
+    color:black
+}
+.tTTInputWrapper1518 .tTTInputLabelExpanded1518 .tTTInput1518{
+    height: fit-content;
+    padding: 12px;
+}
+
+
+
+
+@keyframes oscillateLabel {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-16px);
+    }
+  }

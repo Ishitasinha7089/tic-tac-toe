@@ -1,0 +1,25 @@
+.tTTSquare1518{
+  font-size: 5rem;
+  cursor: pointer;
+  flex:33%;
+  border: none;
+  background: transparent;
+}
+.tTTSquare1518:nth-of-type(1), .tTTSquare1518:nth-of-type(2){
+  border-right: 2px solid var(--greenDark);
+}
+.tTTSquare1518 img{
+  height: 80px;
+  width: 80px;
+  animation: animateAvatar 0.3s ease-in-out;
+}
+
+@keyframes animateAvatar {
+  0%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
+}

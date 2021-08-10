@@ -1,0 +1,19 @@
+.tTTBoard1518{
+  width: 500px;
+  height: 500px;
+  flex-direction: column;
+   background:var(--greenLight);
+  border-radius: 20px;
+  overflow: hidden;
+   /* box-shadow: 0 0 50px var(--shadow); */
+    border-radius: 28px;
+    box-shadow:  14px 14px 43px #cdd8c5,
+              -14px -14px 43px #fbfff1;
+}
+.tTTBoard1518 .row{
+  flex-direction: row;
+  flex:33%;
+}
+.tTTBoard1518 .row:nth-of-type(1), .row:nth-of-type(2){
+  border-bottom: 2px solid var(--greenDark);
+}
