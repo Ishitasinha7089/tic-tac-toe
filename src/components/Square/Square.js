@@ -2,7 +2,7 @@ import './Square.css';
 
 import React from 'react';
 
-import Avatar from '../Avatar/Avatar';
+import Avatar from '../../ui/Avatar/Avatar';
 
 export default class Square extends React.Component{
     state = {

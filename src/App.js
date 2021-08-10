@@ -11,7 +11,7 @@ import {
 
 import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Login/Login';
-import ProtectedRoute from './ProtectedRoute';
+import ProtectedRoute from './utils/ProtectedRoute';
 
 export default class App extends React.Component{
   render() {

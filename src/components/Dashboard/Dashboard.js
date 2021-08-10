@@ -4,12 +4,12 @@ import React from 'react';
 
 import { RotateCcw } from 'react-feather';
 
-import { getWinner } from '../../GetWinner';
-import Avatar from '../Avatar/Avatar';
+import Avatar from '../../ui/Avatar/Avatar';
+import Button from '../../ui/Button/Button';
+import Modal from '../../ui/Modal/Modal';
+import { getWinner } from '../../utils/GetWinner';
 import Board from '../Board/Board';
-import Button from '../Button/Button';
 import Header from '../Header/Header';
-import Modal from '../Modal/Modal';
 
 export default class Dashboard extends React.Component{
     state = {

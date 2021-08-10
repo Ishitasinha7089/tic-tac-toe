@@ -8,9 +8,9 @@ import x from '../../assets/images/delete.png';
 import naruto from '../../assets/images/naruto.png';
 import o from '../../assets/images/o.png';
 import sasuke from '../../assets/images/sasuke.jpg';
-import Button from '../Button/Button';
-import Input from '../Input/Input';
-import Token from '../Token/Token';
+import Button from '../../ui/Button/Button';
+import Input from '../../ui/Input/Input';
+import Token from '../../ui/Token/Token';
 
 const tokens = [
     {
