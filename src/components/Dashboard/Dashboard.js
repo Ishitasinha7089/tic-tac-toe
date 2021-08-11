@@ -194,10 +194,13 @@ export default class Dashboard extends React.Component{
                       modalData={state.modalData}
                     />
                 : null}
+
                 
             </div>
         );
     }
+
+
 
     handleClick(i){
         const history = this.state.history.slice(0, this.state.stepNo + 1);
