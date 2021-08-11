@@ -18,7 +18,7 @@ export default class App extends React.Component{
     return (
         <BrowserRouter>
           <Switch>
-            <Redirect exact from="/" to="/login" />
+            <Redirect from="/" to="/login" />
             <Route path="/login" component={Login} /> 
             <ProtectedRoute path="/dashboard" component={Dashboard} />
             <Redirect from="*" to="/login" />
