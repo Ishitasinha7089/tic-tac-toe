@@ -14,6 +14,9 @@ const Square = ({data, value, onClick, stepNo}) => {
         if(value){
             setIsFilled(true)
         }
+        if(!value){
+            setIsFilled(false)
+        }
         if(stepNo===0){
             setIsFilled(false)
         }
@@ -36,7 +39,7 @@ const Square = ({data, value, onClick, stepNo}) => {
     }
 
         return (
-            <button disabled={isFilled} className="tTTSquare1518" onClick={onClick}>
+            <button disabled={isFilled} className="tTTSquare1518 flexbox" onClick={onClick}>
                 { data ? renderAvatar() : null}
             </button>
         );

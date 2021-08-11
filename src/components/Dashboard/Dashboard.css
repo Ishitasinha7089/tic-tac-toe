@@ -105,3 +105,17 @@
         font-size: 20px;
     }
 }
+
+@media screen and (max-width:450px){
+    .tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 img{
+      height: 50px;
+      width: 50px;
+    }
+  }
+  
+  @media screen and (max-width:340px){
+    .tTTDashboard1518 .tTTDashboardBody1518 .tTTDashboardPlayer1518 img{
+      height: 36px;
+      width: 36px;
+    }
+  }
