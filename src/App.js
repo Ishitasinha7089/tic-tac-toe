@@ -18,8 +18,8 @@ export default class App extends React.Component{
     return (
         <BrowserRouter>
           <Switch>
-            <Redirect from="/" to="/login" />
-            <Route path="/login" component={Login} /> 
+            <Redirect exact from="/" to="/login" />
+            <Route exact path="/login" component={Login} /> 
             <ProtectedRoute path="/dashboard" component={Dashboard} />
             <Redirect from="*" to="/login" />
           </Switch>
