@@ -7,6 +7,7 @@ import { RotateCcw } from 'react-feather';
 import Avatar from '../../ui/Avatar/Avatar';
 import Button from '../../ui/Button/Button';
 import Modal from '../../ui/Modal/Modal';
+import { getStatus } from '../../utils/GetStatus';
 import { getWinner } from '../../utils/GetWinner';
 import Board from '../Board/Board';
 import Header from '../Header/Header';
@@ -57,7 +58,7 @@ export default class Dashboard extends React.Component{
         const history = state.history;
         const current = history[state.stepNo];
         const winner = getWinner(current.squares)
-        const [status, statusSpan, winnerStyle] = this.getStatus(winner);
+        const [status, statusSpan, winnerStyle] = getStatus(winner, state.token1, state.player1Name, state.player2Name, state.data, state.xIsNext);
 
         if(statusSpan!==prevState.statusSpan ){
             this.setState({
@@ -241,42 +242,7 @@ export default class Dashboard extends React.Component{
     
     }
 
-    getStatus =(winner)=>{
-        let status;
-        let statusSpan;
-        let winnerStyle = {
-            color:"black"
-        }
-        
-        if(winner){
-            status = 'Winner is ';
-            if(winner===this.state.token1){
-
-                statusSpan = this.state.player1Name;
-                const color = this.state.data.style1.borderColor;
-                winnerStyle = {
-                    color: color.substring(0,color.length-1)+"Dark"+ color.substring(color.length-1, color.length)
-                }
-                return [status, statusSpan, winnerStyle]
-                 
-                
-            }
-                statusSpan = this.state.player2Name;
-                const color = this.state.data.style2.borderColor;
-                winnerStyle = {
-                    color: color.substring(0,color.length-1)+"Dark"+ color.substring(color.length-1, color.length)
-                }
-                 return [status, statusSpan, winnerStyle]
-                 
-            
-        }
-        status =  'Next player is: ';
-        statusSpan = (this.state.xIsNext ? this.state.player1Name : this.state.player2Name);
-
-        return [status, statusSpan, null]
-
-         
-    }
+    
 
   
 
@@ -285,8 +251,8 @@ export default class Dashboard extends React.Component{
             <div className="tTTDashboardPlayer1518 flexbox">
                 <Avatar src={image} style={style} onClick={null}/>
                 <h1>{playerName}</h1>
-                <p>WIN: {wins}</p>
-                <p>LOOSE: {looses}</p>
+                <p>WINS: {wins}</p>
+                <p>LOSSES: {looses}</p>
             </div>
         );
     }
@@ -297,7 +263,7 @@ export default class Dashboard extends React.Component{
         return(
             <div className="tTTBoardAndHistory1518 flexbox">
 
-                <Board squares={squares} onClick={(i) =>this.handleClick(i)} data={data} />
+                <Board squares={squares} onClick={(i) =>this.handleClick(i)} data={data} stepNo={stepNo} />
 
                 <div className="tTTStatusAndUndo1518 flexbox">
                     <h3>{status}<span style={winnerStyle}>{statusSpan}</span></h3>

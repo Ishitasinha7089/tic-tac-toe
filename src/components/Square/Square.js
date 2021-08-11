@@ -1,41 +1,45 @@
 import './Square.css';
 
-import React from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
 
 import Avatar from '../../ui/Avatar/Avatar';
 
-export default class Square extends React.Component{
-    state = {
-        data: null
-    }
-    componentDidMount() {
-        this.setState({
-            data:this.props.data
-        })
-    }
-    renderAvatar = () =>{
+const Square = ({data, value, onClick, stepNo}) => {
+    const [isFilled, setIsFilled] = useState(false)
+
+    useEffect(() => {
+        if(value){
+            setIsFilled(true)
+        }
+        if(stepNo===0){
+            setIsFilled(false)
+        }
+    }, [value, stepNo])
+    
+    const renderAvatar = () =>{
         return (
-            this.props.data?
+            value!==null ?
             (
-            this.props.value===null ?
-            null:
-            (
-                this.props.value==="token1" ?
-                <Avatar src={this.props.data.token1Image} style={this.props.data.style1} onClick={null}/>
+                value==="token1" ?
+                <Avatar src={data.token1Image} style={data.style1} onClick={null}/>
                 :
-                <Avatar src={this.props.data.token2Image} style={this.props.data.style2} onClick={null}/>
+                <Avatar src={data.token2Image} style={data.style2} onClick={null}/>
             )
+
+            : null
             
-            )
-            :
-            null
         )
+           
     }
-    render() {
+
         return (
-            <button className="tTTSquare1518" onClick={this.props.onClick}>
-                {this.renderAvatar()}
+            <button disabled={isFilled} className="tTTSquare1518" onClick={onClick}>
+                { data ? renderAvatar() : null}
             </button>
         );
-    }
 }
+
+export default Square;

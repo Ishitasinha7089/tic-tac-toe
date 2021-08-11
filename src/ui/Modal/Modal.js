@@ -8,36 +8,11 @@ import Avatar from '../Avatar/Avatar';
 
 const THE_WINNNER = "The winner is"
 
-export default class Modal extends React.Component{
-    state = {
-        modalData: null
-    }
-    componentDidMount() {
-        this.setState({
-            modalData: this.props.modalData
-        })
-    }
-    componentDidUpdate() {
-        console.log(this.props.modalData);
-    }
-    render() {
-        const props = this.props
-        const data = this.props.modalData
-        return(
-            <div onClick={this.closeModal} className={`tTTModal1518 flexbox ${!props.open? "tTTCloseModal1518" : null}`}>
-                { data ? 
-                    this.renderModalBody(data)
-                  
-                  : null
-                }
-            </div>
-        );
-    }
-
-    renderModalBody = (data) =>{
+const Modal = ({modalData, open, closeModal}) => {
+    const renderModalBody = (data) =>{
         return (
             <div className="tTTModalBody1518 flexbox">
-                <X onClick={this.closeModal} />
+                <X onClick={closeModal} />
                 {
                     data.label?
                     <h2>{data.label}</h2>
@@ -53,10 +28,18 @@ export default class Modal extends React.Component{
             </div>
         );
     }
+        return(
+            <div onClick={closeModal} className={`tTTModal1518 flexbox ${!open? "tTTCloseModal1518" : null}`}>
+                { modalData ? 
+                    renderModalBody(modalData)
+                  
+                  : null
+                }
+            </div>
+        );
+    
 
-    closeModal = (e) =>{
-        e.preventDefault()
-        e.stopPropagation()
-        this.props.closeModal()
-    }
+   
 }
+
+export default Modal;

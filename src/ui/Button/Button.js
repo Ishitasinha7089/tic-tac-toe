@@ -2,12 +2,12 @@ import './Button.css';
 
 import React from 'react';
 
-export default class Button extends React.Component{
-    render() {
-        return (
-            <div className="tTTButtonWrapper1518">
-                <button disabled={this.props.disabled} onClick={this.props.onClick} className="tTTButton1518">{this.props.text}</button>
-            </div>
-        );
-    }
+const Button = ({disabled, onClick, text}) => {
+    return (
+        <div className="tTTButtonWrapper1518">
+            <button disabled={disabled} onClick={onClick} className="tTTButton1518">{text}</button>
+        </div>
+    );
 }
+
+export default Button;

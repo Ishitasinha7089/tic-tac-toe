@@ -4,31 +4,32 @@ import React from 'react';
 
 import Square from '../Square/Square';
 
-export default class Board extends React.Component{
-    renderSquare(i){
+const Board = ({data, squares, onClick, stepNo}) => {
+    const renderSquare = (i) => {
         // console.log(i, this.props.squares);
-        return <Square data={this.props.data} value = {this.props.squares[i]} onClick={() => this.props.onClick(i)} />
+        return <Square data={data} value = {squares[i]} onClick={() => onClick(i)} stepNo={stepNo} />
     }
    
-    render() {
         return (
             <div className="tTTBoard1518 flexbox">
                 <div className="row flexbox">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
+                    {renderSquare(0)}
+                    {renderSquare(1)}
+                    {renderSquare(2)}
                 </div>
                 <div className="row flexbox">
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
+                    {renderSquare(3)}
+                    {renderSquare(4)}
+                    {renderSquare(5)}
                 </div>
                 <div className="row flexbox">
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
+                    {renderSquare(6)}
+                    {renderSquare(7)}
+                    {renderSquare(8)}
                 </div>
             </div>
         );
-    }
+
 }
+
+export default Board;

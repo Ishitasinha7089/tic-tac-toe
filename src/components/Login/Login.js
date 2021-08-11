@@ -30,16 +30,13 @@ const tokens = [
 ];
 
 class Login extends React.Component{
-    constructor(props) {
-        super(props)
-        this.state= {
-            tokenId: 0,
-            player1Token:"1",
-            player2Token:"2",
-            player1Name: "",
-            player2Name: "",
-            data: null
-        }
+    state= {
+        tokenId: 0,
+        player1Token:"1",
+        player2Token:"2",
+        player1Name: "",
+        player2Name: "",
+        data: null
     }
     componentDidMount() {
         this.setState({
@@ -80,7 +77,12 @@ class Login extends React.Component{
         return (
             tokens.map(ele =>{
                 return (
-                    <Token key={`${ele.token1Name}_${ele.token2Name}`} token={ele} color1="blue" color2="peach" onTokenChange={this.handleTokenChange}/>
+                    <Token key={`${ele.token1Name}_${ele.token2Name}`}
+                           token={ele}
+                           color1="blue"
+                           color2="peach"
+                           onTokenChange={this.handleTokenChange}
+                    />
                 );
             })
         );

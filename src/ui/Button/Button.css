@@ -19,4 +19,5 @@
 }
 .tTTButtonWrapper1518  .tTTButton1518:disabled{
     box-shadow: none;
+    cursor: not-allowed;
 }

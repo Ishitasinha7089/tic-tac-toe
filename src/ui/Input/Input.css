@@ -14,6 +14,7 @@
     width: fit-content;
     height: 70px;
     flex-direction: column;
+    
 } 
 .tTTInputWrapper1518 .tTTInputLabel1518 .tTTLabel1518{
     font-size: 20px;
@@ -21,7 +22,8 @@
     position: absolute;
     bottom: 12px;
     cursor: text;
-    color:var(--disabled)
+    color:var(--disabled);
+    width: 100%;
 }
 .tTTInputWrapper1518 .tTTInputLabel1518 .tTTInput1518{
     width: 300px;
@@ -32,7 +34,6 @@
     font-size: 20px;
     box-shadow: 0 4px 8px #eee;
     border-radius: 12px;
-    
 }
 .tTTInputWrapper1518 .tTTInputLabel1518 .tTTInput1518:focus{
     outline: none;

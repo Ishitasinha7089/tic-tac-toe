@@ -1,47 +1,43 @@
 import './Input.css';
 
-import React from 'react';
+import React, { useState } from 'react';
 
-export default class Input extends React.Component{
-    constructor(props) {
-        super(props)
-        this.state={
-            error:""
-        }
+const Input = ({label, color, onChange}) =>{
+    const [error, setError] = useState("")
+    const style ={
+        backgroundColor: `var(--${color})`,
+        borderColor: `var(--${color}Dark)`
     }
-    color = this.props.color;
-    label = this.props.label;
-    style ={
-        backgroundColor: `var(--${this.color})`,
-        borderColor: `var(--${this.color}Dark)`
-    }
-    expandInput = (e) =>{
+    const expandInput = (e) =>{
         e.target.parentElement.classList.add('tTTInputLabelExpanded1518')
         e.target.nextSibling.disabled=false;
         e.target.nextSibling.focus();
     }
-    changeValue = (e) =>{
-        this.props.onChange(e.target.value)
+
+    const shrinkInput = (e) =>{
         if(e.target.value===""){
-            this.setState({
-                error: "Player's name is required"
-            })
+            e.target.parentElement.classList.remove('tTTInputLabelExpanded1518')
+            e.target.disabled=true;
+        }
+    }
+    const changeValue = (e) =>{
+        onChange(e.target.value)
+        if(e.target.value===""){
+           setError(`${e.target.name} is required`)
             return
         }
-        this.setState({
-            error: ""
-        })
+        setError("")
     }
-    render() {
-        
-        return (
-            <div className="tTTInputWrapper1518 flexbox">
-                <div className="tTTInputLabel1518 flexbox">
-                    <label onClick={(e) =>this.expandInput(e)} className="tTTLabel1518">{this.label}</label>
-                    <input className="tTTInput1518" disabled={true} style={this.style} onChange={(e) => this.changeValue(e)} />
-                </div>
-                <p>{this.state.error}</p>
+    return (
+        <div className="tTTInputWrapper1518 flexbox">
+            <div className="tTTInputLabel1518 flexbox">
+                <label onClick={(e) =>expandInput(e)} className="tTTLabel1518">{label}</label>
+                <input onBlur={(e) =>shrinkInput(e)} name={label} className="tTTInput1518" disabled={true} style={style} onChange={(e) => changeValue(e)} />
             </div>
-        );
-    }
+            <p>{error}</p>
+        </div>
+    );
 }
+
+
+export default Input;
